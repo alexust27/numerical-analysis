@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class Method:
     def __init__(self, f, h=0.01):
         self.f1, self.f2, self.f3 = f
@@ -26,12 +27,14 @@ class Method:
     def get_method_name(self):
         pass
 
+
 class ExplicitEuler(Method):
     def next_iteration(self, vec):
         return self.h * self.apply(vec) + vec
 
     def get_method_name(self):
         return 'Явный метод Эйлера'
+
 
 class ImplicitEuler(Method):
     def next_iteration(self, vec):
@@ -40,6 +43,7 @@ class ImplicitEuler(Method):
 
     def get_method_name(self):
         return 'Неявный метод Эйлера'
+
 
 class RungeKutta(Method):
     def next_iteration(self, vec):
@@ -51,6 +55,7 @@ class RungeKutta(Method):
 
     def get_method_name(self):
         return 'Метод Рунге-Кутта'
+
 
 class Adams(Method):
     def __init__(self, vec0, f, h=0.01):

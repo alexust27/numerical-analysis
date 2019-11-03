@@ -1,8 +1,9 @@
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 
-from methods import Adams, ExplicitEuler, ImplicitEuler, RungeKutta
-from data import lorenz
+from hw1.methods import Adams, ExplicitEuler, ImplicitEuler, RungeKutta
+from hw1.data import lorenz
+
 
 def draw_graphics(r, vec0):
     fig = plt.figure()
@@ -22,6 +23,7 @@ def draw_graphics(r, vec0):
 
     axes.legend()
     plt.show()
+
 
 def draw_graphic(vec0, method):
     fig = plt.figure()
